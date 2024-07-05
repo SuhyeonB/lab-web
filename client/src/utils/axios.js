@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { refreshAccessToken } from './auth';
 
-const api = axios.create();
+const api = axios.create({
+  baseURL: 'http://localhost:8080'
+});
 
 api.interceptors.response.use(
   response => response,

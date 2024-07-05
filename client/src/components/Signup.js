@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { signup } from '../redux/slices/authSlice';
 import '../style/User.css';
 
 const Signup = () => {
@@ -20,7 +21,7 @@ const Signup = () => {
         if (password !== password2) {
             alert('패스워드가 일치하지 않습니다.');
         } else {
-            dispatch(Signup({ name, email, password }));
+            dispatch(signup({ name, email, password }));
         }
     }
     

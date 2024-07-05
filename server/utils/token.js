@@ -5,17 +5,17 @@ const JWT_KEY = process.env.JWT_SECRET;
 
 const makeAccessToken = (user) => {
     return jwt.sign(
-        { id: user._id },
+        { _id: user._id },
         JWT_KEY,
-        { expiresIn: "1h" }
+        { expiresIn: "30s" }
     );
 }
 
 const makeRefreshToken = (user) => {
     return jwt.sign(
-        { id: user._id },
+        { _id: user._id },
         JWT_KEY,
-        { algorithm: "HS256", expiresIn: "12h" }
+        { algorithm: "HS256", expiresIn: "5m" }
     );
 };
 

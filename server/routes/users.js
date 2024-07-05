@@ -43,7 +43,7 @@ router.post('/signin', async(req, res) => {
             return res.status(400).send({ error: "잘못된 이메일이나 패스워드입니다"})
         }
         const access_token = makeAccessToken({ user });
-        const refresh_token = makeRefreshToken();
+        const refresh_token = makeRefreshToken({ user });
 
         await Token.updateOne(
             {email},
