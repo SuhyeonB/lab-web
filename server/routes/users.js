@@ -4,7 +4,7 @@ const User = require('../schemas/user');
 const Token = require('../schemas/token');
 const bcrypt = require('bcrypt');
 //const auth = require('../middleware/auth');
-const { makeAccessToken, makeRefreshToken, refreshVerify, veriAccess } = require('../utils/token');
+const { makeAccessToken, makeRefreshToken, verifyRefresh, verifyAccess } = require('../utils/token');
 
 // 회원 가입
 router.post('/signup', async (req, res) => {
@@ -42,7 +42,7 @@ router.post('/signin', async(req, res) => {
         if (!isMatch) {
             return res.status(400).send({ error: "잘못된 이메일이나 패스워드입니다"})
         }
-        const access_token = makeAccessToken({ email: user.email });
+        const access_token = makeAccessToken({ user });
         const refresh_token = makeRefreshToken();
 
         await Token.updateOne(
@@ -62,18 +62,20 @@ router.post('/signin', async(req, res) => {
 router.post('/refresh-token', async (req, res) => {
     const { email, refresh_token } = req.body;
     try {
-        const isValid = await refreshVerify(refresh_token, email);
+        const isValid = await verifyRefresh(refresh_token, email);
         if (!isValid) {
             return res.status(401).json({ success: false, msg: "Invalid refresh token" });
         }
-
-        // 새 Access Token 생성
-        const access_token = makeAccessToken({ email });
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(401).json({ success: false, msg: "User not found" });
+        }
+        const access_token = makeAccessToken(user);
 
         res.status(200).json({ access_token });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ success: false, msg: "ServerError" });
+        res.status(500).json({ success: false, msg: "Server error" });
     }
 });
 
