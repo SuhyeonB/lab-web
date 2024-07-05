@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+require('dotenv').config();
 const port = process.env.PORT || 8080;
 const connect = require('./schemas');
 

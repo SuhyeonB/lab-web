@@ -1,0 +1,62 @@
+.userBox {
+    width: 45vw; height: 45em;
+    background: rgba(39, 40, 51, 1);
+    margin: auto;
+    margin-top: 10vh;
+}
+.loginBox, .signupBox {
+    width: 80%;
+    margin: auto;
+}
+.loginBox h3, .signupBox h3 {
+    font-weight: 800;
+    padding-top: 2em;
+    text-align: center;
+}
+.loginBox input {
+    height: 3em;
+    margin: auto;
+    margin-top: 4%;
+
+}
+.loginBox button {
+    display: flex;
+    font-size: large;
+    width: 100%; height: 10%;
+    margin: auto;
+    margin-top: 4%;
+    justify-content: center;
+}
+.loginBox hr { 
+    margin: 2em auto;
+}
+.loginBox a {
+    display: flex;
+    justify-content: flex-end;
+}
+.signupBox h5 { margin: 0;}
+
+.signupBox .line {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.line button {
+    font-size: 1em;
+    width: min-content;
+    margin: 0;
+    justify-content: center;
+    
+}
+.line input {
+    width: 100%;
+}
+.signupBox .submit {
+    margin: 5em 0;
+    width: 100%;
+}
+
+.custom-google-login {
+    width: 100%;
+}
