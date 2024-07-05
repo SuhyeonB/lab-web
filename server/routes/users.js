@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+<<<<<<< HEAD
 const User = require('../schemas/user');
 const Token = require('../schemas/token');
 const bcrypt = require('bcrypt');
@@ -76,5 +77,10 @@ router.post('/refresh-token', async (req, res) => {
         res.status(500).json({ success: false, msg: "ServerError" });
     }
 });
+=======
+const User = require('../models/User');
+
+// 사용자 관련 라우트 추가
+>>>>>>> 7985335e697b69230d6f4ea8acfb00a3ff5802f6
 
 module.exports = router;
