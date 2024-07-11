@@ -5,7 +5,7 @@ const JWT_KEY = process.env.JWT_SECRET;
 
 const makeAccessToken = (user) => {
     return jwt.sign(
-        { id: user._id },
+        { email: user.email },
         JWT_KEY,
         { expiresIn: "1h" }
     );
@@ -13,7 +13,7 @@ const makeAccessToken = (user) => {
 
 const makeRefreshToken = (user) => {
     return jwt.sign(
-        { id: user._id },
+        { email: user.email },
         JWT_KEY,
         { algorithm: "HS256", expiresIn: "12h" }
     );
@@ -37,7 +37,7 @@ const verifyAccess = (token) => {
         const decoded = jwt.verify(token, JWT_KEY);
         return {
             ok: true,
-            id: decoded.id
+            email: decoded.email
         };
     } catch (error) {
         return {

@@ -60,3 +60,30 @@
 .custom-google-login {
     width: 100%;
 }
+
+.custom-google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 2.5em;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #757575;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .custom-google-button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .custom-google-button img {
+    right: 10px;
+    height: 90%;
+    width: auto;
+  }

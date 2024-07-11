@@ -3,6 +3,12 @@ const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
+    googleId: {
+        type: String,
+        unique: true,
+        sparse: true,
+    },
+    // 기존 필드
     name: {
         type: String,
         required: true,

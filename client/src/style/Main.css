@@ -4178,7 +4178,7 @@ body.is-touch #banner {
     background-image: url(../images/cat.jpg);
     background-position: center;
     background-size: cover;
-}
+}*/
 #circle-2 {
     width: 40px;
     height: 40px;
@@ -4189,7 +4189,6 @@ body.is-touch #banner {
     margin-left: 10px;
     text-align: center;
     line-height: 20px;
-    background-image: url(../images/cat.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -4206,4 +4205,4 @@ body.is-touch #banner {
     background-image: url(../images/ex.jpg);
     background-position: center;
     background-size: cover;
-}*/
+}

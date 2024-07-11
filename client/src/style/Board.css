@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media print {
+	body {
+		margin: 0 !important;
+	}
+}
+
+.main-container {
+	font-family: 'Lato';
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ck-content {
+	font-family: 'Lato';
+	line-height: 1.6;
+	word-break: break-word;
+}
+
+.editor-container_classic-editor .editor-container__editor {
+	min-width: 795px;
+	max-width: 795px;
+}
+
+/* BoardHome.js */
+.searchBox {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+}
+.searchBox > * {
+    box-sizing: border-box;
+}
+.searchBox > select {
+    width: 150px;
+}
+
+button.search {
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: 0.2rem;
+    text-decoration: white;
+    cursor: pointer;
+}
+
+.mag {
+    color: rgba(255, 255, 255, 0.75);
+}
+.mag:hover {
+    color: #e44c65 !important;
+    border-bottom-color: transparent;
+}
+
+table {
+    margin-top: 1rem;
+}
+table tfoot {
+    text-align: center;
+}
+
+.posthead .posttitle {
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.posthead h3 { 
+    margin: 1em;
+}
+.posthead .postInfo {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+.postInfo .icons{
+    margin-left: auto;
+}
+.postInfo i {
+    margin-left: 0;
+    margin-right: 1em;
+}
+.posthead hr {
+    margin: 0;
+}
+
+.postbody {
+    min-height: 40vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+.postbody p {
+    padding: 1em;
+}
+.buttonbox {
+    display: flex;
+    justify-content: flex-end;
+}
+.buttonbox .button {
+    font-size: small;
+    padding: 0 30px;
+    margin: 1em 0.5em 2em 0em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.pagination {
+    text-align: center;
+}
+.pagination button {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: none;
+    color: #ffffff ;
+    cursor: pointer;
+    margin: 0 0.5em;
+    font-size: large;
+}
+.pagination button:disabled {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: default;
+}
+.pagination button:active, button:hover {
+    color: #e44c65;
+}
+.pagination button[aria-current="page"] {
+    color: #e44c65;
+    cursor: default;
+}
+
+/* PostSave.js */
+.ck {
+    color: #ffffff;
+    /* --ck-color-base-active: #e44c65;
+    --ck-color-base-active-focus: #e44e67;
+    --ck-color-button-on-color: #ffd6dd;
+    --ck-color-focus-outer-shadow: #ffd6dd;
+    --ck-color-button-on-hover-background: #fbdfe3;
+    --ck-color-button-on-active-background: #fbdfe3; */
+}
+.ck.ck-editor__top.ck-reset_all {
+    background: transparent;
+}
+.ck.ck-editor__main>.ck.ck-editor__editable {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+.ck.ck-content{
+    min-height: 40vh;
+}
+.ck-editor__editable p {margin: 0}
+.contentsArea p {margin:0}
+
+div#content img { max-width: 100%; height: auto; }
+
+/* PostPage.js */
+.like:hover {
+    color: #e44c65 !important;
+    cursor: pointer;
+
+}
+.commentbox h4 {
+    margin-left: 1em;
+}
+.commentbox .cmtxt {
+    position: relative;
+    margin: 0 auto 1 auto;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.commentbox textarea {
+    box-sizing: border-box;
+    border: none;
+}
+.cmtxt button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.commentItem {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    min-height: 5em;
+}
+.cwriter {
+    margin: auto 0;
+    font-weight: 800;
+    height: 2em;
+}
+.rebutton {
+    height: 1em;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+}
+.rebutton:hover,
+.rebutton:active {
+    color: #e44c65 !important;
+    cursor: pointer;
+}
+.recmtxt textarea {
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

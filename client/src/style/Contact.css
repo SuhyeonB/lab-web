@@ -1,0 +1,24 @@
+.contactbox {
+    margin-top: 5em;
+    display: flex;
+}
+
+.contactInfo {
+    width: 45vw; height: 30vh;
+    margin-left: auto;
+}
+.posInfo {
+    margin: 1em;
+}
+.posInfo > * {
+    vertical-align: middle;
+}
+.contactInfo i {
+    width: 1em;
+    text-align: center;
+    margin-right: 1em;
+}
+
+.flyer {
+    width: 40vw;
+}

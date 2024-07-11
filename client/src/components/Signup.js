@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { signup } from '../redux/slices/authSlice';
 import '../style/User.css';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+    let history = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         password: '',
-        password2: ''
+        password2: ''   // 비밀 번호 확인용 재입력
     });
 
     const { name, email, password, password2 } = formData;
@@ -20,7 +23,15 @@ const Signup = () => {
         if (password !== password2) {
             alert('패스워드가 일치하지 않습니다.');
         } else {
-            dispatch(Signup({ name, email, password }));
+            dispatch(signup({ name, email, password }))
+            .unwrap()
+            .then(() => {
+                history('/signin');
+            })
+            .catch(rejectedValueOrSerializedError => {
+                // 서버로부터 받은 에러 메시지를 사용자에게 표시
+                alert(rejectedValueOrSerializedError);
+            });
         }
     }
     
