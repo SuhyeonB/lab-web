@@ -1,0 +1,47 @@
+.mypage-container {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.mypage-container h1 {
+    text-align: center;
+}
+
+.mypage-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mypage-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.mypage-container input[type="text"],
+.mypage-container input[type="password"],
+.mypage-container input[type="file"] {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile-preview {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
